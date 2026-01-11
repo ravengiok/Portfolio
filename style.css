@@ -19,7 +19,8 @@ section::before {
   border-radius: 24px;
 }
 
-.btn.button:hover, .btn.button:active {
+.btn.button:hover,
+.btn.button:active {
   border: 3px solid black;
   background-color: black;
   color: white;
@@ -46,11 +47,11 @@ section::before {
   animation: upDown 2s infinite;
 }
 
-.about::before{
+.about::before {
   content: "About";
 }
 .about-exp-item {
-    margin-top: 24px;
+  margin-top: 24px;
 }
 
 .about-exp-item-header {
@@ -61,6 +62,61 @@ section::before {
 
 .about-exp-item-detail {
   display: none;
+}
+.work::before {
+  content: "Work";
+}
+
+.work-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "work-1 work-2" "work-3 work-3";
+  gap: 16px;
+}
+
+.work-img img {
+  width: 100%;
+}
+
+.work-img-item {
+  position: relative;
+}
+
+.work-img-item::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+#work-1 {
+  grid-area: work-1;
+}
+
+#work-1:hover:after {
+  content: "View Project";
+}
+
+#work-2 {
+  grid-area: work-2;
+}
+#work-2:hover:after {
+  content: "Lala";
+}
+#work-3 {
+  grid-area: work-3;
+}
+#work-3:hover:after {
+  content: "Hehe";
 }
 
 @keyframes upDown {
