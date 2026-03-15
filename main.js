@@ -16,24 +16,34 @@ function toggleDetail(e) {
 
 function onFormSubmit(e) {
   e.preventDefault();
+
   const email = $("#inp_email");
   const subject = $("#inp_subject");
   const message = $("#inp_message");
 
   if (!$(email).val()) {
     alert("Email is required");
+    return;
   } else if (!$(subject).val()) {
     alert("Subject is required");
+    return;
   } else if (!$(message).val()) {
     alert("Message is required");
-  } else {
-    alert("Form Submitted");
-    $(email).val("");
-    $(subject).val("");
-    $(message).val("");
+    return;
   }
+
+  // Definisikan submitBtn dan templateParams dengan benar
+  const submitBtn = $(".contact-form button[type='submit']");
+  submitBtn.prop("disabled", true).text("Sending...");
+
+  const templateParams = {
+    from_email: $(email).val(),
+    subject: $(subject).val(),
+    message: $(message).val(),
+  };
+
   emailjs
-    .send("service_o1m5o4k  ", "template_y4nkk9h", templateParams) // ← ganti ini
+    .send("service_o1m5o4k", "template_y4nkk9h", templateParams)
     .then(() => {
       alert("Pesan berhasil dikirim! Terima kasih 😊");
       $(email).val("");
