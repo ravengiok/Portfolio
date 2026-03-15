@@ -1,3 +1,5 @@
+emailjs.init("dO0CKNMDKUTSkxuh-");
+
 function toggleDetail(e) {
   const target = $(e.target);
 
@@ -30,4 +32,19 @@ function onFormSubmit(e) {
     $(subject).val("");
     $(message).val("");
   }
+  emailjs
+    .send("service_o1m5o4k  ", "template_y4nkk9h", templateParams) // ← ganti ini
+    .then(() => {
+      alert("Pesan berhasil dikirim! Terima kasih 😊");
+      $(email).val("");
+      $(subject).val("");
+      $(message).val("");
+    })
+    .catch((error) => {
+      console.error("Gagal kirim:", error);
+      alert("Gagal mengirim pesan. Coba lagi ya!");
+    })
+    .finally(() => {
+      submitBtn.prop("disabled", false).text("Submit");
+    });
 }
