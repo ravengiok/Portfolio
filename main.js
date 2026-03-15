@@ -43,7 +43,7 @@ function onFormSubmit(e) {
   };
 
   emailjs
-    .send("service_o1m5o4k", "template_y4nkk9h", templateParams)
+    .send("service_bsq2o1r", "template_y4nkk9h", templateParams)
     .then(() => {
       alert("Pesan berhasil dikirim! Terima kasih 😊");
       $(email).val("");
