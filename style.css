@@ -154,17 +154,139 @@ section::before {
     font-weight: 700;
 }
 
+.social-icon {
+  width: 32px;
+  height: auto;
+}
+.footer {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+  padding: 2rem 0;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #6c757d;
+  box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.25);
+}
+
+.footer p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 992px) {
+  section::before {
+    font-size: 56px;
+    left: -20px;
+  }
+
+  .home h1 {
+    font-size: 56px;
+  }
+
+  .home h3 {
+    font-size: 36px;
+  }
+
+  .profile-img {
+    max-width: 240px;
+  }
+}
+
 @media only screen and (max-width: 768px) {
-    .home img {
-        width: 50%;
-    }
+  section {
+    padding-top: 96px;
+  }
+
+  section::before {
+    font-size: 48px;
+    left: -10px;
+    top: 10px;
+  }
+
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .home h3 {
+    font-size: 28px;
+  }
+
+  .profile-img {
+    max-width: 200px;
+    margin-bottom: 24px;
+  }
+
+  .work-img {
+    grid-template-columns: 1fr;
+    grid-template-areas: "work-1" "work-2" "work-3";
+    gap: 20px;
+  }
+
+  .work-img-item:hover::after {
+    font-size: 1.2rem;
+  }
+
+  .contact-form {
+    padding: 32px 20px;
+  }
+
+  .contact .row {
+    gap: 32px !important;
+  }
+
+  .about-exp-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .about-exp-item-header button {
+    align-self: flex-start;
+  }
 }
 
 @media only screen and (max-width: 576px) {
-    section::before {
-        left: -10px;
-        font-size: 64px;
-    }
+  section::before {
+    font-size: 36px;
+    left: -5px;
+    top: 5px;
+  }
+
+  .home h1 {
+    font-size: 32px;
+  }
+
+  .home h3 {
+    font-size: 24px;
+  }
+
+  .profile-img {
+    max-width: 160px;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  .btn.button {
+    padding: 6px 18px;
+    font-size: 0.9rem;
+  }
+
+  .contact-form {
+    padding: 24px 16px;
+  }
+
+  .social-icon {
+    width: 28px;
+  }
+
+  .work-img-item:hover::after {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 1.5rem 0;
+    font-size: 0.8rem;
+  }
 }
 
 @keyframes upDown {

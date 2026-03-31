@@ -31,8 +31,6 @@ function onFormSubmit(e) {
     alert("Message is required");
     return;
   }
-
-  // Definisikan submitBtn dan templateParams dengan benar
   const submitBtn = $(".contact-form button[type='submit']");
   submitBtn.prop("disabled", true).text("Sending...");
 
@@ -45,7 +43,7 @@ function onFormSubmit(e) {
   emailjs
     .send("service_bsq2o1r", "template_y4nkk9h", templateParams)
     .then(() => {
-      alert("Pesan berhasil dikirim! Terima kasih 😊");
+      alert("Pesan berhasil dikirim! Terima kasih sudah menghubungi saya.");
       $(email).val("");
       $(subject).val("");
       $(message).val("");
@@ -58,3 +56,12 @@ function onFormSubmit(e) {
       submitBtn.prop("disabled", false).text("Submit");
     });
 }
+
+document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+document.addEventListener('DOMContentLoaded', function() {
+  const yearSpan = document.getElementById('currentYear');
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+});

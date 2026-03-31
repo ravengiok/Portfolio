@@ -129,14 +129,14 @@ Berkolaborasi dalam tim pengembang untuk mempelajari dasar pembuatan fitur aplik
           </p>
           <div class="row">
             <div class="col d-flex align-items-center">
-              <img class="w-25" src="https://www.svgrepo.com/show/88935/facebook-logo.svg" alt="facebook icon" />
+              <img class="social-icon" src="https://www.svgrepo.com/show/88935/facebook-logo.svg" alt="facebook icon" />
               <a href="http://facebook.com/mas.adhan/" target="_blank" class="text-decoration-none text-dark ms-2">
                 Rahmat Syahrur
               </a>
             </div>
             <div class="col d-flex align-items-center">
               <img
-                class="w-25"
+                class="social-icon"
                 src="https://www.svgrepo.com/show/494211/instagram.svg"
                 alt="instagram icon"
               />
@@ -145,7 +145,7 @@ Berkolaborasi dalam tim pengembang untuk mempelajari dasar pembuatan fitur aplik
               </a>
             </div>
             <div class="col d-flex align-items-center">
-              <img class="w-25" src="https://www.svgrepo.com/show/494343/github.svg" alt="github icon" />
+              <img class="social-icon" src="https://www.svgrepo.com/show/494343/github.svg" alt="github icon" />
               <a href="https://github.com/ravengiok" target="_blank" class="text-decoration-none text-dark ms-2">
                 @ravengiok
                 </a>
@@ -176,13 +176,13 @@ Berkolaborasi dalam tim pengembang untuk mempelajari dasar pembuatan fitur aplik
             </div>
             <div class="mb-3">
               <label for="inp_message" class="form-label">Message</label>
-              <input
-                type="text"
+              <textarea
                 class="form-control"
                 id="inp_message"
+                rows="5"
                 placeholder="Your Message"
                 required
-              />
+              ></textarea>
             </div>
             <div class="d-flex justify-content-center mt-5">
               <button type="submit" class="btn button">Submit</button>
@@ -191,6 +191,19 @@ Berkolaborasi dalam tim pengembang untuk mempelajari dasar pembuatan fitur aplik
         </div>
       </div>
     </section>
+<footer class="footer footer-expand-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0">
+          &copy; <span id="currentYear"></span> Rahmat Syahrur Ramadhan. 
+          All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
